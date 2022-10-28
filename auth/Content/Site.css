@@ -1,0 +1,28 @@
+﻿@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url('/fonts/YekanBakh/YekanBakh-Regular.woff2') format("woff2"), url('/fonts/YekanBakh/YekanBakh-Regular.ttf') format("truetype")
+}
+
+@font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('/fonts/YekanBakh/YekanBakh-Medium.woff2') format("woff2"), url('/fonts/YekanBakh/YekanBakh-Medium.ttf') format("truetype")
+}
+
+html, body {
+    direction: rtl;
+    text-align: right;
+    font-family: YekanBakh !important;
+    height: 100%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+}
