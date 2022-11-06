@@ -77,3 +77,7 @@ C:\Users\win_10\source\repos\auth\auth\obj\Debug\auth.csproj.CoreCompileInputs.c
 C:\Users\win_10\source\repos\auth\auth\obj\Debug\auth.csproj.CopyComplete
 C:\Users\win_10\source\repos\auth\auth\obj\Debug\auth.dll
 C:\Users\win_10\source\repos\auth\auth\obj\Debug\auth.pdb
+C:\Users\win_10\source\repos\auth\auth\bin\EntityFramework.dll
+C:\Users\win_10\source\repos\auth\auth\bin\EntityFramework.SqlServer.dll
+C:\Users\win_10\source\repos\auth\auth\bin\EntityFramework.xml
+C:\Users\win_10\source\repos\auth\auth\bin\EntityFramework.SqlServer.xml
