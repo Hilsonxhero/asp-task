@@ -1,24 +1,73 @@
 ﻿using auth.Models;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls;
 
 namespace auth.Controllers
 {
     public class ArticleController : Controller
     {
+    
+        public  List<Article> Articles = new List<Article>() {
+                new Article
+                {
+                    Id =1,
+                    Title = "مقاله شماره 1",
+                    Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+                },
+                new Article
+                {
+                    Id =2,
+                    Title = "مقاله شماره 2",
+                    Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+                },
+                new Article
+                {
+                    Id =3,
+                    Title = "مقاله شماره 3",
+                    Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+                }
+            };
         // GET: Article
         public ActionResult Index()
         {
-            return View();
+
+            //List<Article> Articles = new List<Article>() { 
+            //    new Article
+            //    {
+            //        Id =1,
+            //        Title = "مقاله شماره 1",
+            //        Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+            //    },
+            //    new Article
+            //    {
+            //        Id =2,
+            //        Title = "مقاله شماره 2",
+            //        Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+            //    },
+            //    new Article
+            //    {
+            //        Id =3,
+            //        Title = "مقاله شماره 3",
+            //        Description = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+            //    }
+            //};
+
+  
+
+            return View(Articles);
         }
 
         // GET: Article/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            Article article = Articles.Find(x => x.Id == id);
+  
+            return View(article);
         }
 
         // GET: Article/Create
@@ -47,7 +96,9 @@ namespace auth.Controllers
         // GET: Article/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            Article article = Articles.Find(x => x.Id == id);
+
+            return View(article);
         }
 
         // POST: Article/Edit/5
@@ -56,8 +107,7 @@ namespace auth.Controllers
         {
             try
             {
-                // TODO: Add update logic here
-
+      
                 return RedirectToAction("Index");
             }
             catch
@@ -69,7 +119,9 @@ namespace auth.Controllers
         // GET: Article/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            Article article = Articles.Find(x => x.Id == id);
+
+            return View(article);
         }
 
         // POST: Article/Delete/5
@@ -78,7 +130,9 @@ namespace auth.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
+                Article article = Articles.Find(x => x.Id == id);
+
+                Articles.Remove(article);
 
                 return RedirectToAction("Index");
             }

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<auth.Models.Article>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>لیست مقالات</h2>
+
+<p>
+    @Html.ActionLink("ساخت مقاله جدید", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           عنوان
+        </th>
+        <th>
+          توضیحات
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("ویرایش", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("مشاهده", "Details", new { id=item.Id }) |
+            @Html.ActionLink("حذف", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
